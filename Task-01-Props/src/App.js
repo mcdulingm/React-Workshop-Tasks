@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import books from './data';
 
-function App() {
+
+function ReadingList() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='container'>
+      <section>
+        <div className='title'>
+          <h1>TOP Reading List</h1>
+          <div className='underline'></div>
+        </div>
+      </section>
+        
+      <section className='readingList'>
+      {books.map((book) => {
+          return <Book key={book.id} {...book}></Book>
+        })}
+      </section>
+    </main>
   );
 }
 
-export default App;
+const Book = ({id,title,author,image,description}) => {
+  return (
+    <article>
+      <span>{id}</span>
+      <img src={image} alt="" />
+      <div>
+        <h2>{title}</h2>
+        <h3>{author}</h3>
+        <p>{description}</p>
+      </div>
+    </article>
+  )
+};
+
+export default ReadingList;
