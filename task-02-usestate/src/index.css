@@ -1,0 +1,115 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #d7e3d9;
+}
+
+.container {
+  margin: 4rem auto;
+  max-width: 500px;
+  width: 80vw;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.list {
+  display: flex;
+  padding: 1.4rem 1.3rem;
+  background: #fff;
+  border-radius: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(126, 191, 137, 0.2) 0px 8px 24px;
+}
+
+
+h2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.btn {
+  background: #56a162;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  transition-duration: 0.5s;
+  position: relative;
+}
+
+.toggle {
+  text-align: left;
+  display: flex;
+}
+
+.toggle::after {
+  display: inline;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  content: "+";
+  font-size: 1.5rem;
+}
+
+.toggle.close::after {
+  content: "-";
+  right: 20px;
+}
+
+.remove {
+  background: #ff4949;
+}
+
+.btn:hover {
+  background: #7ebf89;
+}
+
+.remove:hover {
+  background: #da2323;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.extend {
+  background: cornflowerblue;
+}
+
+.extend:hover {
+  background: royalblue;
+}
+
+.icon {
+  font-size: 1.4rem ;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem 0.3rem 0.7rem;
+  border-radius: 5rem;
+  font-weight: 900;
+  background: #ff4949;
+}
+
+span {
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: cornflowerblue;
+}
+
+@media screen and (max-width: 500px) {
+  .days, .list {
+    flex-direction: column;
+  }
+
+  .list h2 {
+    padding-bottom: 1rem;
+  }
+
+}
